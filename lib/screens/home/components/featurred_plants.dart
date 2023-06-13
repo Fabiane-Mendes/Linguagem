@@ -14,12 +14,12 @@ class FeaturedPlants extends StatelessWidget {
       child: Row(
         children: <Widget>[
           FeaturePlantCard(
-            image: "assets/images/bottom_img_1.png",
-            press: () {},
+              image: "assets/images/bottom_img_1.png",
+            press: () {},// A função de pressionar está vazia neste exemplo
           ),
           FeaturePlantCard(
             image: "assets/images/bottom_img_2.png",
-            press: () {},
+            press: () {},// A função de pressionar está vazia neste exemplo
           ),
         ],
       ),
@@ -40,7 +40,7 @@ class FeaturePlantCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: press,
+      onTap: press,// Associa a função de pressionar ao gesto de toque no cartão
       child: Container(
         margin: EdgeInsets.only(
           left: kDefaultPadding,
