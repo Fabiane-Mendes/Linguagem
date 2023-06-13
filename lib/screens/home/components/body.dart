@@ -11,18 +11,22 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     // It will provie us total height  and width of our screen
     Size size = MediaQuery.of(context).size;
+     // permite a rolagem em um dispositivo pequeno
     // it enable scrolling on small device
     return SingleChildScrollView(
+      // Widget SingleChildScrollView permite que o conteúdo seja rolado verticalmente
       child: Column(
+        // Widget Column para organizar os elementos verticalmente
         crossAxisAlignment: CrossAxisAlignment.start,
+        // Alinha os elementos à esquerda
         children: <Widget>[
-          HeaderWithSearchBox(size: size),
-          TitleWithMoreBtn(title: "Recomended", press: () {}),
-          RecomendsPlants(),
-          TitleWithMoreBtn(title: "Featured Plants", press: () {}),
-          FeaturedPlants(),
-          SizedBox(height: kDefaultPadding),
-        ],
+          HeaderWithSearchBox(size: size),// Widget personalizado HeaderWithSearchBox
+          TitleWithMoreBtn(title: "Recomended", press: () {}),// Widget personalizado TitleWithMoreBtn
+          RecomendsPlants(),// Widget personalizado RecomendsPlants
+          TitleWithMoreBtn(title: "Featured Plants", press: () {}),// Widget personalizado TitleWithMoreBtn
+          FeaturedPlants(),// Widget personalizado FeaturedPlants
+          SizedBox(height: kDefaultPadding),// Espaçamento vertical definido por kDefaultPadding
+        ],// Outros elementos podem ser adicionados aqui
       ),
     );
   }
